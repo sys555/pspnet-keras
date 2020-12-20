@@ -1,8 +1,8 @@
 import os
 import random 
  
-segfilepath=r'./VOCdevkit/VOC2007/SegmentationClass'
-saveBasePath=r"./VOCdevkit/VOC2007/ImageSets/Segmentation/"
+segfilepath=r'../VOCdevkit/VOC2007/SegmentationClass'
+saveBasePath=r"../VOCdevkit/VOC2007/ImageSets/Segmentation/"
  
 trainval_percent=1
 train_percent=0.9
@@ -14,21 +14,21 @@ for seg in temp_seg:
         total_seg.append(seg)
 
 num=len(total_seg)  
-list=range(num)  
+l=range(num)  
+
 tv=int(num*trainval_percent)  
 tr=int(tv*train_percent)  
-trainval= random.sample(list,tv)  
+trainval= random.sample(l,tv)  
 train=random.sample(trainval,tr)  
  
-print("train and val size",tv)
-print("traub suze",tr)
+
 ftrainval = open(os.path.join(saveBasePath,'trainval.txt'), 'w')  
 ftest = open(os.path.join(saveBasePath,'test.txt'), 'w')  
 ftrain = open(os.path.join(saveBasePath,'train.txt'), 'w')  
 fval = open(os.path.join(saveBasePath,'val.txt'), 'w')  
  
-for i  in list:  
-    name=total_seg[i][:-4]+'\n'  
+for i  in l:  
+    name=total_seg[i][:-4]+'\n' 
     if i in trainval:  
         ftrainval.write(name)  
         if i in train:  
