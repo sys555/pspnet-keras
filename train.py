@@ -35,18 +35,18 @@ if __name__ == "__main__":
     #   mobilenet
     #   resnet50
     #---------------------#
-    backbone = "mobilenet"
+    backbone = "resnet50"
     #---------------------#
     #   是否使用辅助分支
     #   会占用大量显存
     #---------------------#
-    aux_branch = False
+    aux_branch = True
     #---------------------#
     #   下采样的倍数
     #   16显存占用小
     #   8显存占用大
     #---------------------#
-    downsample_factor = 16
+    downsample_factor = 8
 
     # 获取model
     model = pspnet(num_classes,inputs_size,downsample_factor=downsample_factor,backbone=backbone,aux_branch=aux_branch)
