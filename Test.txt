@@ -1,1 +1,0 @@
-git clone https://github.com/sys555/pspnet-keras.git --depth==1
