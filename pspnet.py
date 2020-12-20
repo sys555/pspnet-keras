@@ -12,10 +12,10 @@ import os
 #--------------------------------------------#
 class Pspnet(object):
     _defaults = {
-        "model_path"        : 'model_data/pspnet_mobilenetv2.h5',
+        "model_path"        : 'model_data/ep100-loss0.016-val_loss0.015.h5',
         "backbone"          : "mobilenet",
         "model_image_size"  : (473, 473, 3),
-        "num_classes"       : 21,
+        "num_classes"       : 2,
         "downsample_factor" : 16,
         "blend"             : False,
     }
