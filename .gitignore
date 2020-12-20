@@ -1,4 +1,8 @@
 /VOCdevkit
 /logs
+<<<<<<< HEAD
 /img
 /model_data
+=======
+/logs
+>>>>>>> fe6288401a1119b5cb928580edb27ae958342bb9
